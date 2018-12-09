@@ -10,6 +10,7 @@ export class TourList extends Component {
   };
 
   removeTour  = id =>{
+    console.log(id);
     const {tours} = this.state;
     const sortedTours = tours.filter(tour=>tour.id !==id);
     //stopped at 1:40:54
@@ -26,7 +27,7 @@ export class TourList extends Component {
       <section className="tourlist">
         {tours.map(tour =>{
           return (
-            <Tour key={tour.id} tour={tour} removeTours={this.removeTour}/>
+            <Tour key={tour.id} tour={tour} removeTour={this.removeTour}/>
           )
         })}
       </section>

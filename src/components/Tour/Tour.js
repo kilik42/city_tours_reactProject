@@ -21,7 +21,8 @@ export class Tour  extends Component { // eslint-disable-line react/prefer-state
       <article className="tour">
        <div className="img-container">
           <img  src={img} alt=""/>
-          <span className="close-btn" onClick={removeTour(id )}>
+          <span className="close-btn" onClick={()=>{removeTour(id )}}>
+          
            <i className="fas fa-window-close"/>
           </span>
        </div>
